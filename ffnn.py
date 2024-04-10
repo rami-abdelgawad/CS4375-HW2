@@ -14,7 +14,7 @@ from argparse import ArgumentParser
 
 unk = '<UNK>'
 # Consult the PyTorch documentation for information on the functions used below:
-# https://pytorch.org/docs/stable/torch.html
+# https://pytorch.org/docs/stable/torch.html e
 class FFNN(nn.Module):
     def __init__(self, input_dim, h):
         super(FFNN, self).__init__()
