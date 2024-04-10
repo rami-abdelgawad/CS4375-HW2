@@ -38,6 +38,8 @@ class RNN(nn.Module):
         # [to fill] sum over output
         output_sum = torch.sum(output, dim=1) 
 
+        # Change
+
         # [to fill] obtain probability dist.
         predicted_vector = torch.softmax(output_sum, dim=0)
 
