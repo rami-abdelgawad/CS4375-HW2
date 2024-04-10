@@ -36,6 +36,8 @@ class RNN(nn.Module):
 
         # [to fill] sum over output 
 
+        # Change
+
         # [to fill] obtain probability dist.
 
         return predicted_vector
