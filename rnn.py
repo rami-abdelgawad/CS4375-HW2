@@ -33,7 +33,7 @@ class RNN(nn.Module):
         # [python rnn.py --hidden_dim 32 --epochs 10] obtain hidden layer representation (https://pytorch.org/docs/stable/generated/torch.nn.RNN.html)
         _, hidden = self.rnn(inputs)
         # [--train_data training.json --val_data] obtain output layer representations
-        output = self.fc(out[:, -1, :])
+        output = self.fc(oct[:, -1, :])
 
         # [validation.json] sum over output
         output_sum = torch.sum(output, dim=1) 
