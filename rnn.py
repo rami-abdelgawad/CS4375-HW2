@@ -34,7 +34,7 @@ class RNN(nn.Module):
         _, hidden = self.rnn(inputs)
         
         # [--train_data training.json --val_data] obtain output layer representations
-        output = self.fc(oct[:, -1, :])
+        output = self.W(hidden[-1])
 
         # [validation.json] sum over output
         output_sum = torch.sum(output, dim=1) 
