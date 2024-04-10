@@ -14,7 +14,7 @@ from argparse import ArgumentParser
 
 unk = '<UNK>'
 # Consult the PyTorch documentation for information on the functions used below:
-# https://pytorch.org/docs/stable/torch.html e
+# https://pytorch.org/docs/stable/torch.html
 class FFNN(nn.Module):
     def __init__(self, input_dim, h):
         super(FFNN, self).__init__()
@@ -32,10 +32,13 @@ class FFNN(nn.Module):
 
     def forward(self, input_vector):
         # [to fill] obtain first hidden layer representation
+        hidden = self.activation(self.W1(input_vector))
 
         # [to fill] obtain output layer representation
+        output = self.W2(hidden)
 
         # [to fill] obtain probability dist.
+        predicted_vector = self.softmax(output)
 
         return predicted_vector
 
